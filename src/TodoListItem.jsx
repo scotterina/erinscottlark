@@ -1,11 +1,5 @@
-function TodoForm() {
-  return (
-    <form>
-      <label htmlFor="todoTitle">Todo</label>
-      <input id="todoTitle" />
-      <button>Add Todo</button>
-    </form>
-  );
+function TodoListItem({ todo }) {
+  return <li>{todo.title}</li>;
 }
 
-export default TodoForm;
+export default TodoListItem;
