@@ -1,11 +1,16 @@
-function TodoForm() {
+function TodoListItem({ todo, onCompleteTodo }) {
   return (
-    <form>
-      <label htmlFor="todoTitle">Todo</label>
-      <input id="todoTitle" />
-      <button>Add Todo</button>
-    </form>
+    <li>
+      <form>
+        <input
+          type="checkbox"
+          checked={todo.isCompleted}
+          onChange={() => onCompleteTodo(todo.id)}
+        />
+        {todo.title}
+      </form>
+    </li>
   );
 }
 
-export default TodoForm;
+export default TodoListItem;
